@@ -89,6 +89,15 @@ async function cargarPeliculasPorTipos(type) {
                   <h3>${data.results[j].title}</h3>
                     <img src="https://image.tmdb.org/t/p/w300${data.results[j].backdrop_path}" class="img-fluid" alt="...">
                   </div>   
+                  <h3>${data.results[j].title}</h3>
+                    <img src="https://image.tmdb.org/t/p/w300${data.results[j].backdrop_path}" class="img-fluid" alt="...">
+                  </div>   
+                  <h3>${data.results[j].title}</h3>
+                    <img src="https://image.tmdb.org/t/p/w300${data.results[j].backdrop_path}" class="img-fluid" alt="...">
+                  </div>   
+                  <h3>${data.results[j].title}</h3>
+                    <img src="https://image.tmdb.org/t/p/w300${data.results[j].backdrop_path}" class="img-fluid" alt="...">
+                  </div>   
                 </div>`;
       }
       peliculas_destacadas.innerHTML = contenido_peliculas_destacadas_response;
