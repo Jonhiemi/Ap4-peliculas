@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
-    <title>Ap4 peliculas</title>
+    <title>AP4 Películas</title>
 </head>
 <body>
     <!-- NavBar -->
-
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">AP4 peliculas</a>
+          <a class="navbar-brand" href="#">AP4 Películas</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" id="button-popular">Populares</a>
+                <button class="nav-link" aria-current="page" id="button-popular">Populares</button>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="button-top-rated">Top Rating</a>
+                <button class="nav-link" id="button-top-rated">Top Rating</button>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Próximos estrenos</a>
@@ -36,36 +35,44 @@
         </div>
       </nav>
 
-      <!-- peliculas destacadas -->
-
+      <!-- Películas destacadas -->
       <div id="peliculas-destacadas-contenedor" class="container">
-        <h2 class="peliculas-destacadas-titulo"> Películas destacadas</h2>
-
+        <h2 class="peliculas-destacadas-titulo">Películas destacadas</h2>
         <div class="row" id="peliculas-destacadas">
         </div>
       </div>
 
-      <!-- Peliculas -->
+      <!-- Películas -->
       <div id="peliculas-contenedor" class="container">
         <h2 class="peliculas-titulo">Películas</h2>
         <div class="row" id="peliculas">
         </div>
       </div>
+
       <!-- Modal -->
-<div class="modal" id="pelicula-modal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down modal-lg">
-    <div class="modal-content">
-      <!--Modal Body Card-->
-      <div class="modal-body">
-      <!--Modal Body Spinner-->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <div class="modal fade" tabindex="-1" id="pelicula-modal">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Detalles de la Película</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+              <!-- Modal Body Spinner -->
+              <div id="spinner_modal" class="d-flex justify-content-center align-items-center" style="height: 200px;">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-      
-      <script src="./scrip.js"></script>
+
+      <script src="./scripts.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
