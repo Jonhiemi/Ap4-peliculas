@@ -2,11 +2,13 @@ let peliculas_destacadas = document.getElementById("peliculas-destacadas");
 let peliculas = document.getElementById("peliculas");
 let button_popular = document.getElementById("button-popular");
 let button_top_rated = document.getElementById("button-top-rated");
+let button_upcoming = document.getElementById("button-upcoming")
 let modal_body = document.getElementById("modal-body");
 let spinner_modal = document.getElementById("spinner-modal")
 
 const url_movies_popular = "https://api.themoviedb.org/3/movie/popular";
 const url_movies_top_rated = "https://api.themoviedb.org/3/movie/top_rated";
+const url_movies_upcoming = "https://api.themoviedb.org/3/movie/upcoming";
 const url_movie_detail = "https://api.themoviedb.org/3/movie";
 const language = "es-MX";
 const page = 1;
@@ -26,6 +28,9 @@ if (button_top_rated) {
   button_top_rated.addEventListener("click", () =>
     cargarPeliculasPorTipos("top_rated")
   );
+}
+if (button_upcoming) {
+  button_upcoming.addEventListener("click", () => cargarPeliculasPorTipos("upcoming"));
 }
 async function cagarDatosDePeliculaPorId(id) {
   try {
@@ -72,6 +77,9 @@ async function cargarPeliculasPorTipos(type) {
       url = url_movies_top_rated;
     } else if (type === "popular") {
       url = url_movies_popular;
+    }
+    else if (type === "upcoming") {
+      url = url_movies_upcoming;
     }
     peliculas_destacadas.innerHTML = spinner;
     const respuesta = await fetch(
